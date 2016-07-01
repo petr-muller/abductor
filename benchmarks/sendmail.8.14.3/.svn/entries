@@ -1,0 +1,54 @@
+8
+
+dir
+914
+https://svn.origo.ethz.ch/closetest/trunk/benchmarks/sendmail.8.14.3
+https://svn.origo.ethz.ch/closetest
+
+
+
+2008-07-05T09:06:04.868061Z
+405
+ccris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+22e5b79c-c023-4d39-8e8c-0ce51885f842
+
+sendmail-8.14.3.tar.gz
+file
+
+
+
+
+2009-09-11T15:20:09.000000Z
+a5ee5d26e1f546a2da5fb9a513bd6bce
+2008-07-05T09:06:04.868061Z
+405
+ccris
+has-props
+
+configure.pl
+file
+
+
+
+
+2009-09-11T15:20:09.000000Z
+a16f4a707613ddb35a0cd867d900e708
+2008-07-05T09:06:04.868061Z
+405
+ccris
+has-props
+

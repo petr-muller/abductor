@@ -1,0 +1,4 @@
+#!/bin/sh
+
+     exec ./bin/cilly -c --dofootprint --gc_summaries=0 --automatic_skip --test --timeout=1 --out=/dev/null "$@"
+

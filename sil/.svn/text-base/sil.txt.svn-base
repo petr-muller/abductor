@@ -1,0 +1,130 @@
+(*
+ *
+ * Copyright (c) 2006-2008,
+ *  Cristiano Calcagno    <ccris@doc.ic.ac.uk>
+ *  Dino Distefano        <ddino@dcs.qmul.ac.uk>
+ *  Peter O'Hearn         <ohearn@dcs.qmul.ac.uk>
+ *  Hongseok Yang         <hyang@dcs.qmul.ac.uk>
+ * All rights reserved.
+ *)
+
+------ INTERMEDIATE LANGUAGE ------
+
+typ ::=  /* types TODO */
+
+lexp ::= (base,offset)  /* lvalue expressions */
+base ::= &x | exp
+offset ::= nil | fld.offset | [exp].offset
+fld in Fields ::= /* a set of field names */
+lab in Labels ::= /* a set of labels for CFG */
+
+exp ::= /* rvalue expressions */
+  42 | *lexp | sizeof(exp) | sizeoftype(typ) | alignofexp(exp) | alignoftype(typ) |
+  -exp | exp+exp | (typ)exp | lexp | startof(lexp)
+
+instr ::= /* instructions */
+  lexp=exp | lexp=(exp)(exp,...,exp) | asm_magic
+  
+stmt ::= /* statements - a lot of details to check in the implementation */
+  lab: stm_body
+stm_body ::=
+ {instr;...;instr} | return exp | goto lab | break
+ | continue | if(exp) block else block
+ | switch exp case exp:lab...case exp:lab /* can be eliminated */
+ | while(1) block
+
+block ::= {stmt;...;stmt}
+
+
+-------- MEMORY MODEL --------
+
+L = Atom x Offset   /* domain for l-values */
+Loc = /* a set of heap locations */
+Vars = /* a set of stack/global variables */
+Atom = Vars + Loc
+Offset = () + (Fields + Int) :: Offset
+
+V = L + Int         /* domain for r-values */
+
+Heaps = Atom --\ (Offset --\ V)
+
+--------  SEMANTICS  -------
+
+[lexp] : Heaps -> L
+[exp] : Heaps -> V
+[base] : Heaps -> L
+[offset] : Heaps -> Offset
+
+/* semantics for lexp */
+/* using @: Offset x Offset -> Offset */
+[(base,offset)]h = let (a,o) = [base]h in (a,o @ [offset]h)
+
+/* semantics for base */
+[&x]h = (x,())
+[exp]h = [exp]h  if [exp]h is in L 
+
+/* semantics for offset */
+[nil]h = ()
+[fld.offset]h = fld::() @ [offset]h
+[exp.offset]h = n::() @ [offset]h  if n=[exp]h is in Int
+
+/* semantics for exp */
+[42]h = 42
+[*lexp]h = let (a,o) = [lexp]h in h a o  /* note can be undefined */
+[sizeof(exp)]h = /* magic! */
+[sizeoftype(exp)]h = /* magic! */
+[alignofexp(exp)]h = /* magic! */
+[alignoftype(exp)]h = /* magic! */
+[-exp]h = -[exp]h if [exp]h in Int
+[exp1+exp2]h = [exp1]h+[exp2]h if [exp1]h and [exp2]h in Int
+[(typ)exp]h = [exp]h
+[lexp]h = [lexp]h /* the rhs is semantics for lexp */
+[startof(lexp)]h = [lexp]h
+
+
+------------ SYMBOLIC EXECUTION: FRIENDLY FRAGMENT -----------------
+tyname ::= /* type names */
+typenv ::= /* type environment */
+  (tyname,typ) list
+typ ::=  /* types */
+  tyname | Int | Ptr(typ) | Array(typ,42) | Struct(compinfo)
+compinfo ::= (typ x Fields) list
+
+lexp ::= (base,offset)  /* lvalue expressions */
+base ::= &x | exp
+offset ::= nil | fld.offset | [exp].offset
+
+exp ::= /* rvalue expressions */
+  42 | sizeof(exp) | sizeoftype(typ) | alignofexp(exp) | alignoftype(typ) |
+  -exp | exp+exp | (typ)exp | lexp | startof(lexp)
+
+ptoexp ::= /* expressions to appear on rhs of |-> */
+  Base(exp) | Arraye(ptoexp1,...,ptoexp42) | structe
+structe ::= {fld1 ptoexp1,...,fld42 ptoexp42}
+
+P ::= exp==exp | exp!=exp 
+Pi ::= true | P | Pi and Pi
+
+H ::= (exp |-> ptoexp) | true
+Sigma ::= emp | H | Sigma * Sigma
+
+Q ::= Pi and Sigma
+
+instr ::= /* instructions */
+  lexp=*lexp | lexp=exp
+
+Typing exp:
+- 42 : Int
+- ....
+- (typ)exp:typ1 if exp:typ1  /* the "real" type of the expression */
+
+Typing lexp:
+- &x : Ptr(typ) if env(x)=typ
+- (base,nil):Ptr(typ) if base:Ptr(typ)
+- (base,offset@fld):Ptr(typ) if (base,offset):Ptr(Struct{...,typ fld,...})
+- (base,[exp].offset):Ptr(typ) if (base,offset):Ptr(Array(typ,42)) and exp:Int 
+
+Typing ptoexp:
+- Base(exp):typ if exp:typ
+- Arraye(ptoexp1,...,ptoexp42):Array(typ,42) if ptoexpi:typ
+- {fld1 ptoexp1,...,fld42 ptoexp42}:Struct{typ1 fld1,...,typ42 fld42} if ptoexpi:typi

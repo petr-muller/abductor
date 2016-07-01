@@ -1,0 +1,288 @@
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: allocate.c
++  num_procs: 76 (47 ok, 0 timeouts, 29 exceptions)
++  exceptions:  No_specs:14 assert false:15
++  avg time: 0.014857
++  avg specs: 0.644737
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: compile-i386.c
++  num_procs: 101 (28 ok, 0 timeouts, 73 exceptions)
++  exceptions:  No_specs:49 assert false:17 No_preconditions:1 Bad_footprint:6
++  avg time: 0.018343
++  avg specs: 0.475248
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: compile.c
++  num_procs: 2 (1 ok, 0 timeouts, 1 exceptions)
++  exceptions:  assert false:1
++  avg time: 0.008456
++  avg specs: 0.500000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: cse.c
++  num_procs: 23 (7 ok, 1 timeouts, 15 exceptions)
++  exceptions:  No_specs:5 assert false:5 Bad_footprint:5
++  avg time: 0.018957
++  avg specs: 0.565217
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: ctags.c
++  num_procs: 12 (5 ok, 0 timeouts, 7 exceptions)
++  exceptions:  No_specs:3 assert false:2 Bad_footprint:2
++  avg time: 0.012121
++  avg specs: 0.583333
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: dissect.c
++  num_procs: 27 (7 ok, 1 timeouts, 19 exceptions)
++  exceptions:  Unknown_proc:2 No_specs:8 assert false:5 No_preconditions:1 Bad_footprint:3
++  avg time: 0.028147
++  avg specs: 0.629630
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: evaluate.c
++  num_procs: 106 (21 ok, 5 timeouts, 80 exceptions)
++  exceptions:  Unknown_proc:1 No_specs:34 assert false:33 No_preconditions:1 Bad_footprint:11
++  avg time: 0.021055
++  avg specs: 0.688679
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: example.c
++  num_procs: 93 (12 ok, 3 timeouts, 78 exceptions)
++  exceptions:  No_specs:43 assert false:21 No_preconditions:1 Bad_footprint:13
++  avg time: 0.004370
++  avg specs: 0.172043
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: expand.c
++  num_procs: 51 (4 ok, 0 timeouts, 47 exceptions)
++  exceptions:  Unknown_proc:1 No_specs:27 assert false:8 No_preconditions:3 Bad_footprint:8
++  avg time: 0.003455
++  avg specs: 0.117647
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: expression.c
++  num_procs: 35 (4 ok, 0 timeouts, 31 exceptions)
++  exceptions:  No_specs:20 assert false:7 Bad_footprint:4
++  avg time: 0.003517
++  avg specs: 0.171429
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: flow.c
++  num_procs: 58 (21 ok, 4 timeouts, 33 exceptions)
++  exceptions:  No_specs:16 assert false:5 Bad_footprint:12
++  avg time: 0.068457
++  avg specs: 0.913793
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: graph.c
++  num_procs: 5 (3 ok, 0 timeouts, 2 exceptions)
++  exceptions:  assert false:2
++  avg time: 0.008854
++  avg specs: 0.800000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: inline.c
++  num_procs: 20 (5 ok, 0 timeouts, 15 exceptions)
++  exceptions:  No_specs:6 assert false:7 Bad_footprint:2
++  avg time: 0.002347
++  avg specs: 0.300000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: lib.c
++  num_procs: 48 (16 ok, 1 timeouts, 31 exceptions)
++  exceptions:  No_specs:12 assert false:17 Bad_footprint:2
++  avg time: 0.017984
++  avg specs: 0.479167
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: linearize.c
++  num_procs: 119 (43 ok, 1 timeouts, 75 exceptions)
++  exceptions:  No_specs:45 assert false:14 Bad_footprint:16
++  avg time: 0.009234
++  avg specs: 0.478992
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: liveness.c
++  num_procs: 20 (7 ok, 2 timeouts, 11 exceptions)
++  exceptions:  Unknown_proc:1 No_specs:2 assert false:1 Bad_footprint:7
++  avg time: 0.218940
++  avg specs: 1.700000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: memops.c
++  num_procs: 15 (6 ok, 1 timeouts, 8 exceptions)
++  exceptions:  No_specs:4 assert false:1 Bad_footprint:3
++  avg time: 0.008899
++  avg specs: 0.666667
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: obfuscate.c
++  num_procs: 6 (2 ok, 0 timeouts, 4 exceptions)
++  exceptions:  No_specs:1 assert false:3
++  avg time: 0.003222
++  avg specs: 0.333333
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: parse.c
++  num_procs: 97 (25 ok, 0 timeouts, 72 exceptions)
++  exceptions:  No_specs:24 assert false:30 No_preconditions:6 Bad_footprint:12
++  avg time: 0.019900
++  avg specs: 0.505155
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: pre-process.c
++  num_procs: 75 (15 ok, 1 timeouts, 59 exceptions)
++  exceptions:  No_specs:36 Garbage:1 assert false:17 No_preconditions:2 Bad_footprint:3
++  avg time: 0.029455
++  avg specs: 0.333333
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: ptrlist.c
++  num_procs: 21 (6 ok, 3 timeouts, 12 exceptions)
++  exceptions:  No_specs:6 assert false:6
++  avg time: 0.032831
++  avg specs: 0.619048
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: scope.c
++  num_procs: 13 (3 ok, 0 timeouts, 10 exceptions)
++  exceptions:  No_specs:7 assert false:1 Bad_footprint:2
++  avg time: 0.007777
++  avg specs: 0.461538
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: show-parse.c
++  num_procs: 50 (15 ok, 0 timeouts, 35 exceptions)
++  exceptions:  No_specs:27 assert false:6 Bad_footprint:2
++  avg time: 0.010957
++  avg specs: 0.380000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: simplify.c
++  num_procs: 47 (13 ok, 1 timeouts, 33 exceptions)
++  exceptions:  No_specs:16 assert false:6 No_preconditions:2 Bad_footprint:9
++  avg time: 0.033654
++  avg specs: 0.638298
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: sort.c
++  num_procs: 3 (0 ok, 0 timeouts, 3 exceptions)
++  exceptions:  Unknown_proc:2 No_specs:1
++  avg time: 0.000000
++  avg specs: 0.000000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: sparse.c
++  num_procs: 21 (4 ok, 1 timeouts, 16 exceptions)
++  exceptions:  No_specs:5 assert false:6 Bad_footprint:5
++  avg time: 0.004509
++  avg specs: 0.333333
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: storage.c
++  num_procs: 34 (8 ok, 0 timeouts, 26 exceptions)
++  exceptions:  No_specs:7 assert false:13 Bad_footprint:6
++  avg time: 0.026487
++  avg specs: 0.470588
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: strtold.c
++  num_procs: 4 (2 ok, 0 timeouts, 2 exceptions)
++  exceptions:  assert false:2
++  avg time: 0.023463
++  avg specs: 0.500000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: symbol.c
++  num_procs: 39 (13 ok, 1 timeouts, 25 exceptions)
++  exceptions:  Unknown_proc:1 No_specs:9 assert false:6 No_preconditions:1 Bad_footprint:8
++  avg time: 0.016930
++  avg specs: 0.615385
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: test-dissect.c
++  num_procs: 8 (4 ok, 0 timeouts, 4 exceptions)
++  exceptions:  No_specs:3 assert false:1
++  avg time: 0.055618
++  avg specs: 1.250000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: test-lexing.c
++  num_procs: 1 (1 ok, 0 timeouts, 0 exceptions)
++  exceptions: 
++  avg time: 0.016912
++  avg specs: 1.000000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: test-linearize.c
++  num_procs: 2 (1 ok, 0 timeouts, 1 exceptions)
++  exceptions:  assert false:1
++  avg time: 0.008456
++  avg specs: 0.500000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: test-parsing.c
++  num_procs: 3 (1 ok, 0 timeouts, 2 exceptions)
++  exceptions:  No_specs:1 assert false:1
++  avg time: 0.005637
++  avg specs: 0.333333
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: test-unssa.c
++  num_procs: 6 (2 ok, 0 timeouts, 4 exceptions)
++  exceptions:  No_specs:1 assert false:3
++  avg time: 0.006405
++  avg specs: 0.500000
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: tokenize.c
++  num_procs: 41 (17 ok, 1 timeouts, 23 exceptions)
++  exceptions:  No_specs:17 assert false:1 No_preconditions:1 Bad_footprint:4
++  avg time: 0.039123
++  avg specs: 0.487805
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ FILE: unssa.c
++  num_procs: 9 (1 ok, 1 timeouts, 7 exceptions)
++  exceptions:  No_specs:1 assert false:2 Bad_footprint:4
++  avg time: 0.001729
++  avg specs: 0.111111
+++++++++++++++++++++++++++++++++++++++++++++++++++

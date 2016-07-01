@@ -1,0 +1,9 @@
+K 10
+executable
+V 4
+true
+K 14
+svn:executable
+V 1
+*
+END

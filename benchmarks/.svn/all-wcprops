@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/closetest/!svn/ver/794/trunk/benchmarks
+END
+stats.pl
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/closetest/!svn/ver/794/trunk/benchmarks/stats.pl
+END
+loop
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/301/trunk/benchmarks/loop
+END
+test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/closetest/!svn/ver/521/trunk/benchmarks/test.pl
+END

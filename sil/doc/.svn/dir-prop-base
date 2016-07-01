@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 28
+*.html
+style.css
+test.odoc
+
+
+END

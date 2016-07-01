@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/closetest/!svn/ver/619/trunk/cil/bin
+END
+compilecilly.pl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/closetest/!svn/ver/243/trunk/cil/bin/compilecilly.pl
+END
+patcher.bat.in
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/closetest/!svn/ver/14/trunk/cil/bin/patcher.bat.in
+END
+test-bad
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/14/trunk/cil/bin/test-bad
+END
+abductor
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/516/trunk/cil/bin/abductor
+END
+cabsxform
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/closetest/!svn/ver/130/trunk/cil/bin/cabsxform
+END
+cilly.bat.in
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/closetest/!svn/ver/14/trunk/cil/bin/cilly.bat.in
+END
+patcher
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/130/trunk/cil/bin/patcher
+END
+cilly_compileonly
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/closetest/!svn/ver/221/trunk/cil/bin/cilly_compileonly
+END
+teetwo
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/closetest/!svn/ver/14/trunk/cil/bin/teetwo
+END
+invader
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/619/trunk/cil/bin/invader
+END
+cilly
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/closetest/!svn/ver/516/trunk/cil/bin/cilly
+END
+cilly_wrapper
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/closetest/!svn/ver/516/trunk/cil/bin/cilly_wrapper
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/closetest/!svn/ver/130/trunk/cil/bin/.cvsignore
+END
+CilConfig.pm.in
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/closetest/!svn/ver/14/trunk/cil/bin/CilConfig.pm.in
+END

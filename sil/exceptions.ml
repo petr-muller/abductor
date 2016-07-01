@@ -1,0 +1,229 @@
+(*
+ *
+ * Copyright (c) 2006-2008,
+ *  Cristiano Calcagno    <ccris@doc.ic.ac.uk>
+ *  Dino Distefano        <ddino@dcs.qmul.ac.uk>
+ *  Peter O'Hearn         <ohearn@dcs.qmul.ac.uk>
+ *  Hongseok Yang         <hyang@dcs.qmul.ac.uk>
+ * All rights reserved.
+ *)
+
+module F = Format
+module Html = Error.Html
+module E =  Error.MyErr (struct let mode = Error.DEFAULT end)
+
+exception No_specs
+exception Unknown_proc
+exception Meet_required
+exception Function_undefined
+exception Wrong_argument_number
+exception Abduction_Case_Not_implemented
+exception Possible_memory_fault of Prop.prop
+exception Leak of Prop.prop * Prop.prop * Sil.hpred
+exception Memory_fault_Inconsistent_CallingState_MissingFP of Prop.prop
+exception Array_of_pointsto
+exception Re_exe_funcall
+exception Symexec_memory_error
+exception Filter_out
+exception Inconsistent_after_funcall
+
+let recognize_exception exn = match exn with
+  | No_specs -> "No_specs"
+  | Prop.Cannot_star -> "Cannot_star"
+  | Unknown_proc -> "Unknown_proc"
+  | Prop.Bad_footprint -> "Bad_footprint"
+  | Meet_required -> "Meet_required"
+  | Function_undefined -> "Function_undefined"
+  | Wrong_argument_number -> "Wrong_argument_number"
+  | Leak (_,_,_) -> "Leaks"
+  | Possible_memory_fault p -> "Possible_memory_fault"
+  | Memory_fault_Inconsistent_CallingState_MissingFP _ -> "Possible_memory_fault_CS/MFP"
+  | Assert_failure (file,loc,char) -> "assert_false"
+  | Abduction_Case_Not_implemented -> "Abduction_Case_Not_implemented"
+  | Array_of_pointsto -> "Array_of_pointsto"
+  | Re_exe_funcall -> "Re_exe_funcall"
+  | Symexec_memory_error -> "Symexec_memory_error"
+  | Filter_out -> "Filter_out"
+  | Inconsistent_after_funcall -> "Inconsistent_after_funcall"
+  | exn -> "unknown"
+
+
+let pp_exception loc fmt = function
+  | Leak (p,garb_p,_) ->
+      F.fprintf fmt "%s:%d: Analysis Error: Leak detected" !Config.curr_filename loc.Cil.line;
+  | Assert_failure (file,line,char) ->
+      F.fprintf fmt "%s:%d: Assert false(%s,%d,%d)\n" !Config.curr_filename loc.Cil.line file line char
+(*
+  | Leak (p, hpred) ->
+      F.fprintf fmt "%s:%d: Analysis Error: Leak detected@\n" !Config.curr_filename loc.Cil.line;
+      F.fprintf fmt "PROP: %a@\n@\nHPRED:%a" Prop.pp_prop p Sil.pp_hpred hpred
+*)
+  | Possible_memory_fault p ->
+      F.fprintf fmt "%s:%d: Analysis Error: Possible memory violation@\n" !Config.curr_filename loc.Cil.line
+  | Memory_fault_Inconsistent_CallingState_MissingFP prop ->
+      F.fprintf fmt "%s:%d: Analysis Error: No compatible missing FP. Possible memory fault@\n" !Config.curr_filename loc.Cil.line
+  | exn -> F.fprintf fmt "%s:%d: Analysis Error: %s@\n" !Config.curr_filename loc.Cil.line (recognize_exception exn)
+
+(** Return true if the exception is not serious and should be handled in timeout mode *)
+let handle_exception = function
+(*
+  | Leak _ -> false
+*)
+  | Not_found -> false
+  | Invalid_argument _ -> false
+  | Failure _ -> false
+  | Memory_fault_Inconsistent_CallingState_MissingFP _ -> true
+  | Possible_memory_fault _ -> true
+(*
+  | Abduction_Case_Not_implemented -> false
+*)
+  | Wrong_argument_number -> true
+  | Assert_failure _ -> true
+  | exn -> recognize_exception exn <> "unknown" (* true *)
+
+let loc_compare loc1 loc2 =
+  let n = compare loc1.Cil.line loc2.Cil.line
+  in if n<>0 then n
+    else let n = compare loc1.Cil.byte loc2.Cil.byte
+      in if n<>0 then n
+	else compare loc1.Cil.file loc2.Cil.file
+
+let node_session_compare (nodeid1,session1,loc1) (nodeid2,session2,loc2) =
+  let n = Ident.int_compare nodeid1 nodeid2
+  in if n<>0 then n else Ident.int_compare session1 session2
+
+module NodeSessionSet = Set.Make(struct
+  type t = int * int * Cil.location
+  let compare = node_session_compare
+  end)
+
+(** Type of the exception log, to be reset once per function *)
+type exn_log = (bool*string,NodeSessionSet.t) Hashtbl.t
+
+(** Apply f to nodes and exception names *)
+let exn_log_iter f (exn_log:exn_log) =
+  Hashtbl.iter (fun (in_footprint,exn_name) set ->
+    NodeSessionSet.iter (fun (node_id,seddion,loc) -> f node_id in_footprint exn_name) set)
+    exn_log
+
+(** Empty exception log *)
+let exn_log_empty () = Hashtbl.create 13
+
+let curr_exn_log = exn_log_empty ()
+
+(** Add an exception description to the exception log unless there is
+    one already at the same location; return true if added *)
+let add_exception tbl (in_footprint,exn_string) (locs:NodeSessionSet.t) : bool =
+  try
+    let current_locs = Hashtbl.find tbl (in_footprint,exn_string) in
+      if NodeSessionSet.subset locs current_locs then false
+      else
+	let () = Hashtbl.replace tbl (in_footprint,exn_string) (NodeSessionSet.union locs current_locs)
+	in true
+  with Not_found ->
+    let () = Hashtbl.add tbl (in_footprint,exn_string) locs
+    in true
+
+(** Add exception to the exception log *)
+let log_exception loc node_id session exn =
+  let exn_string = recognize_exception exn in
+  let added = add_exception curr_exn_log (!Config.footprint,exn_string) (NodeSessionSet.singleton (node_id,session,loc))
+  in if added && !Config.footprint then E.stderr "%a"(pp_exception loc) exn
+
+let reset_exn_log () =
+  Hashtbl.clear curr_exn_log
+
+(** Update an old exn log with a new one *)
+let exn_log_update exnlog_old exnlog_new =
+  Hashtbl.iter (fun (infp,s) l -> ignore (add_exception exnlog_old (infp,s) l)) exnlog_new
+
+(** Update the parameter exn log with the current exn log *)
+let exn_log_update_with_current exnlog =
+  exn_log_update exnlog curr_exn_log
+
+(** Print an exception log *)
+let pp_exn_log fmt exnlog =
+  let f (infp,s) locs = F.fprintf fmt "%s@ " s
+  in Hashtbl.iter f exnlog
+
+(** Print an exception log in html format *)
+let pp_exn_log_html path_to_root fmt (exnlog:exn_log) =
+  let pp_set fmt set  =
+    let pp_nodeid_session_loc fmt (nodeid,session,loc) =
+      Html.pp_session_link path_to_root fmt (nodeid,session,loc.Cil.line)
+    in NodeSessionSet.iter (pp_nodeid_session_loc fmt) set in
+  let f do_fp (infp,s) locs =
+    if do_fp==infp then F.fprintf fmt "<br>%s %a" s pp_set locs 
+  in
+    F.fprintf fmt "%aEXCEPTIONS DURING FOOTPRINT@\n" Html.pp_hline ();
+    Hashtbl.iter (f true) exnlog;
+    F.fprintf fmt "%aEXCEPTIONS DURING RE-EXECUTION@\n" Html.pp_hline ();
+    Hashtbl.iter (f false) exnlog
+
+(** Global per-file exception table *)
+module Exn_table = struct
+  let global_exn_log = exn_log_empty ()
+  let reset () = Hashtbl.clear global_exn_log
+
+  let count_exn exn_string locs =
+    ignore (add_exception global_exn_log exn_string locs)
+
+  let table_size_footprint () =
+    let count = ref 0 in
+    let () = Hashtbl.iter (fun (in_footprint,_) locs ->
+      if in_footprint then count := !count + (NodeSessionSet.cardinal locs)) global_exn_log
+    in !count
+
+  let pp_stats_footprint fmt () =
+    let pp (in_footprint,exn_name) locs =
+      if in_footprint then F.fprintf fmt " %s:%d" exn_name (NodeSessionSet.cardinal locs)
+    in Hashtbl.iter pp global_exn_log
+
+  module LocMap =
+    Map.Make(struct
+      type t = NodeSessionSet.elt
+      let compare = node_session_compare
+    end)
+
+  let print_exn_table_details fmt =
+    let map_fp = ref LocMap.empty in
+    let map_re = ref LocMap.empty in
+    let add_exn loc (in_fp,exn_string) =
+      let map = if in_fp then map_fp else map_re in
+      try
+	let exn_list = LocMap.find loc !map
+	in map := LocMap.add loc (exn_string :: exn_list) !map
+      with Not_found ->
+	map := LocMap.add loc [exn_string] !map in
+    let f exn_string locs =
+      NodeSessionSet.iter (fun loc -> add_exn loc exn_string) locs in
+    let () = Hashtbl.iter f global_exn_log in
+    let pp (nodeid,session,loc) fmt exn_strings =
+      List.iter (fun exn_string ->
+	F.fprintf fmt "%s:%d: %s" !Config.curr_filename loc.Cil.line exn_string) exn_strings
+    in 
+      F.fprintf fmt "@.Detailed exceptions during footprint phase:@.";
+      LocMap.iter (fun loc exn_string -> F.fprintf fmt "%a@." (pp loc) exn_string) !map_fp;
+      F.fprintf fmt "@.Detailed exceptions during re-execution phase:@.";
+      LocMap.iter (fun loc exn_string -> F.fprintf fmt "%a@." (pp loc) exn_string) !map_re
+end
+
+(** Print an exception log and add it to the global per-file table *)
+let pp_exn_log_and_extend_table fmt exn_log =
+  let print_exn (in_fp,exn_name) locs =
+    Exn_table.count_exn (in_fp,exn_name) locs; 
+    F.fprintf fmt "exception (%s)@." exn_name
+  in Hashtbl.iter print_exn exn_log
+
+(** Size of the global per-file exception table for the footprint phase *)
+let exn_table_size_footprint =
+  Exn_table.table_size_footprint
+
+(** Print stats for the global per-file exception table *)
+let pp_exn_table_stats = Exn_table.pp_stats_footprint
+
+(** Print details of the global per-file exception table *)
+let print_exn_table_details =
+  Exn_table.print_exn_table_details
+
+

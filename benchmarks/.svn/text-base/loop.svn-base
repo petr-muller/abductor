@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+if ($#ARGV < 0) {
+  print "No arguments passed\n";
+  print "Usage: loop db_dir_name\n";
+  exit;
+}
+
+$db_dir = $ARGV[0];
+
+
+for(;1;)
+{
+	system "clear;../stats.pl ${db_dir}";
+ 	sleep 1;
+}

@@ -1,0 +1,41 @@
+#!/usr/bin/perl
+
+use File::Basename;
+use FindBin;
+use lib "$FindBin::Bin";
+use CilConfig;
+
+
+my @args;
+my $argnum;
+foreach $argnum (0 .. $#ARGV) {
+ $args[$argnum] = "\'$ARGV[$argnum]\'";
+}
+
+my($name,$path,$suffix) = fileparse($0);
+
+if ($ENV{'FOOTPRINT_OPTIONS'} eq "") {
+  die "Environment variable FOOTPRINT_OPTIONS is not set";
+}
+else {
+  $footprint_options = $ENV{'FOOTPRINT_OPTIONS'};
+}
+
+if (!$ENV{'FOOTPRINT_DB_DIR'} eq "") {
+  my $db_dir = $ENV{'FOOTPRINT_DB_DIR'};
+  $footprint_options = "${footprint_options} --db_dir=${db_dir}";
+}
+
+$ENV{'CILHOME'} = "$::cilhome";
+
+my $cilly_path = "${path}/cilly_compileonly${suffix}";
+
+my $call_cilly = "$cilly_path $footprint_options @args";
+my $call_gcc = "gcc @args";
+
+#print STDERR "\ncall cilly: $call_cilly\n";
+my $res = system $call_cilly;
+if($res != 0) {die;}
+
+#print STDERR "\ncall gcc: $call_gcc\n";
+system $call_gcc;

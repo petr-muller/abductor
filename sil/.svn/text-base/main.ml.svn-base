@@ -1,0 +1,23 @@
+(*
+ *
+ * Copyright (c) 2006-2008,
+ *  Cristiano Calcagno    <ccris@doc.ic.ac.uk>
+ *  Dino Distefano        <ddino@dcs.qmul.ac.uk>
+ *  Peter O'Hearn         <ohearn@dcs.qmul.ac.uk>
+ *  Hongseok Yang         <hyang@dcs.qmul.ac.uk>
+ * All rights reserved.
+ *)
+
+(** Nothing yet *)
+let fname = "-";;
+let ic = if fname = "-" then stdin else open_in fname;;
+let lex = Lexing.from_channel ic;;
+let () = Lexer.init lex fname;;
+Parsing.clear_parser();;
+let rec f b =
+  if b then
+    let continue,proplist = Parser.proplist_iter Lexer.token lex
+    in Propset.pp_proplist_dotty_file "parser.dot" proplist;
+      f continue
+in f true;
+  close_in ic

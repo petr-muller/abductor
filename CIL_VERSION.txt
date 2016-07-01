@@ -1,0 +1,3 @@
+The tool is currently based on the svn cil
+  svn://hal.cs.berkeley.edu/home/svn/projects/trunk/cil
+revision 10122 (last actual change r10120 2008-04-12)

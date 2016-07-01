@@ -1,0 +1,307 @@
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/charset.c:624: Analysis Error: Leak detected
++++REAL+++
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/charset.c:709: Analysis Error: Leak detected
++++REAL+++
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/imclient.c:413: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/imclient.c:720: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/imclient.c:1254: Analysis Error: Leak detected
++++REAL+++
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb.c:167: Analysis Error: Leak detected
++++REAL+++
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb_flat.c:214: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb_flat.c:461: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb_quotalegacy.c:535: Analysis Error: Leak detected
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb_quotalegacy.c:214: Leaks
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb_quotalegacy.c:461: Leaks
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb_quotalegacy.c:557: Leaks
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb_berkeley.c:214: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/lib/cyrusdb_berkeley.c:461: Leaks
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/sieve.c:947: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/sieve.c:949: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/sieve.c:947: Leaks
+
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/sieve-lex.c:2196: Analysis Error: Leak detected
++++REAL+++
+
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/message.c:623: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/message.c:630: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:296: Analysis Error: Leak detected
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:302: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:314: Analysis Error: No compatible missing FP. Possible memory fault
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:154: Analysis Error: Cannot_star
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:154: Analysis Error: Cannot_star
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:278: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:296: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:302: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:314: Analysis Error: No compatible missing FP. Possible memory fault
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:154: Analysis Error: Cannot_star
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:154: Analysis Error: Cannot_star
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:278: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:296: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:302: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:314: Analysis Error: No compatible missing FP. Possible memory fault
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:154: Analysis Error: Cannot_star
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:154: Analysis Error: Cannot_star
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:278: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:296: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:302: Analysis Error: Leak detectedTIMEOUT:2.029157s
++  exceptions:  Possible_memory_fault_CS/MFP:9 No_specs:3 Cannot_star:17 Leaks:17
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:158: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:302: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:302: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:302: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:302: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:296: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:296: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:296: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:296: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:278: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:278: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/bc_generate.c:278: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:394: Analysis Error: Leak detected[5/16 RE:0] sieve_addflag 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:554: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:558: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:568: Analysis Error: No compatible missing FP. Possible memory fault
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:366: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:288: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:284: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:280: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:366: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:288: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:284: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:280: Analysis Error: Leak detectedTIMEOUT: turning on filtering
++  exceptions:  Possible_memory_fault_CS/MFP:3 Bad_footprint:4 No_specs:9 Leaks:11
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:558: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:554: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:394: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:280: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:280: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:284: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:284: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:288: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:288: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:366: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:366: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:394: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:366: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/script.c:366: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Analysis Error: Leak detectedTIMEOUT:1.992527s
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Analysis Error: Leak detectedTIMEOUT:1.982664s
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:250: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:193: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:197: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:203: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:203: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:207: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:207: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:211: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:211: Analysis Error: Leak detectedTIMEOUT:2.069455s
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:250: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:193: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:197: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:203: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:203: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:207: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:207: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:211: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:211: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:215: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:215: Analysis Error: Leak detectedTIMEOUT:2.446757s
++  exceptions:  Bad_footprint:12 No_specs:177 Leaks:27
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:250: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:250: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:215: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:215: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:211: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:211: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:211: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:211: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:207: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:207: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:207: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:207: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:203: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:203: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:203: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:203: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:197: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:197: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:193: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:193: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/tree.c:139: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/addr-lex.c:1686: Analysis Error: Leak detected[24/34 RE:0] addr_scan_bytes 
++  exceptions:  Possible_memory_fault_CS/MFP:1 Bad_footprint:26 No_specs:10 Possible_memory_fault:1 Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/addr-lex.c:1686: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/addr-lex.c:1686: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/sievec.c:266: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/sievec.c:287: Analysis Error: No_specs
++  exceptions:  No_specs:3 Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/sieve/sievec.c:266: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:667: Analysis Error: Leak detected[19/34 RE:0] spawn_service 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:761: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:783: Analysis Error: Cannot_star
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:900: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:900: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:812: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:900: Analysis Error: Leak detected[22/34 RE:0] reap_child 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1171: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1170: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1190: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1204: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1203: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1240: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1240: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1239: Analysis Error: Leak detected[23/34 RE:0] process_msg 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1253: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1263: Analysis Error: Leak detected[31/34 RE:0] tokenize 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1312: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1438: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1449: Analysis Error: Bad_footprint
++  exceptions:  Bad_footprint:27 No_specs:6 Cannot_star:4 Abduction_Case_Not_implemented:2 Leaks:17
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:667: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:761: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:900: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:900: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:900: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1239: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1240: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1240: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1203: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1204: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1190: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1170: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1171: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1312: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1438: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1263: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1253: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1312: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/master/master.c:1253: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapd.c:8828: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapd.c:8866: Analysis Error: No_specs
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapd.c:8828: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapd.c:8866: Analysis Error: No_specs
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapd.c:9234: Analysis Error: Leak detectedNO_SPECS:
++  exceptions:  Possible_memory_fault_CS/MFP:1 Bad_footprint:30 No_specs:190 Abduction_Case_Not_implemented:4 Leaks:3
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapd.c:8828: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapd.c:8828: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapd.c:9234: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/proxy.c:93: Analysis Error: Leak detected[4/5 RE:0] proxy_adddest 
++  exceptions:  Possible_memory_fault_CS/MFP:1 Bad_footprint:6 Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/proxy.c:93: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/proxy.c:93: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/proxy.c:93: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:714: Analysis Error: Leak detected[4/19 RE:0] grab 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:567: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:567: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:576: Analysis Error: Leak detectedTIMEOUT: turning on filtering
++  exceptions:  Bad_footprint:3 No_specs:9 Possible_memory_fault:3 Abduction_Case_Not_implemented:3 Leaks:4
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:576: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:567: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:567: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:714: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imap_proxy.c:714: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/index.c:4517: Analysis Error: Leak detectedFatal error: exception Failure("Leak while collecting specs after footprint")
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/append.c:426: Analysis Error: Leak detected
++++REAL+++
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/append.c:447: Analysis Error: Leak detected[7/14 RE:0]
++++REAL+++
+
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/append.c:447: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/append.c:426: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/append.c:426: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/append.c:426: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:783: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:794: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:783: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:794: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:783: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:794: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:783: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:783: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:794: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:783: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detectedTIMEOUT: turning on filtering
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:794: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:783: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:783: Analysis Error: Bad_footprint
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:794: Analysis Error: Bad_footprint
++  exceptions:  Possible_memory_fault_CS/MFP:26 Bad_footprint:32 No_specs:31 Cannot_star:5 Abduction_Case_Not_implemented:2 Leaks:18
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/mailbox.c:785: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/setproctitle.c:118: Analysis Error: Leak detected[1/2 RE:0] setproctitle_init 
++  exceptions:  Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/setproctitle.c:118: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/setproctitle.c:118: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/setproctitle.c:118: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Analysis Error: Leak detected[5/6 RE:0] mysasl_callbacks 
++  exceptions:  Bad_footprint:2 No_specs:1 Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/saslclient.c:156: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:172: Analysis Error: Leak detected[4/46 RE:0] appendattvalue 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:113: Analysis Error: Leak detectedNO_SPECS:
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:216: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:216: Analysis Error: Leak detected[18/46 RE:0] freeentryatts 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:138: Analysis Error: Leak detected[22/46 RE:0] appendstrlistpat 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:202: Analysis Error: Leak detected[24/46 RE:0] appendentryatt 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:1879: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:1973: Analysis Error: Bad_footprint
++  exceptions:  Bad_footprint:8 No_specs:32 Abduction_Case_Not_implemented:2 Leaks:7
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:216: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:216: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:138: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:113: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:202: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:1879: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/annotate.c:172: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:96: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:95: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:96: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:95: Analysis Error: Leak detected[8/9 RE:0] getword 
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:161: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:160: Analysis Error: Leak detectedTIMEOUT: turning on filtering
++  exceptions:  Leaks:6
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:160: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:161: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:95: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:95: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:96: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:96: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/imapparse.c:96: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/backend.c:208: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/backend.c:209: Analysis Error: No_specs
++  exceptions:  Possible_memory_fault_CS/MFP:2 Bad_footprint:4 No_specs:5 Abduction_Case_Not_implemented:1 Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/backend.c:208: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1086: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1086: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1086: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1086: Analysis Error: Leak detected[6/19 RE:0] generate_notify 
++  exceptions:  Possible_memory_fault_CS/MFP:1 Bad_footprint:6 No_specs:6 Abduction_Case_Not_implemented:1 Leaks:8
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1086: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1086: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1086: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1086: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/lmtpd.c:1078: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/spool.c:285: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/ctl_mboxlist.c:917: Analysis Error: Leak detected[9/15 RE:0] do_verify 
++  exceptions:  Possible_memory_fault_CS/MFP:1 No_specs:3 Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/ctl_mboxlist.c:917: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/squat_build.c:722: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/squat_build.c:755: Analysis Error: Bad_footprint
++  exceptions:  Bad_footprint:21 No_specs:23 Cannot_star:8 Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imap/squat_build.c:722: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imtest/imtest.c:1562: Analysis Error: Leak detected/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imtest/imtest.c:1580: Analysis Error: Bad_footprint
++  exceptions:  Possible_memory_fault_CS/MFP:6 Bad_footprint:4 No_specs:29 Possible_memory_fault:1 Abduction_Case_Not_implemented:4 Leaks:1 assert_false:4
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imtest/imtest.c:1562: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imtest/imtest.c:1562: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/imtest/imtest.c:1562: Leaks
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/perl/sieve/lib/request.c:319: Analysis Error: Leak detectedtrying to create ptsto with type: 128
++  exceptions:  No_specs:8 Leaks:1 assert_false:2
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/perl/sieve/lib/request.c:319: Leaks
++  exceptions:  No_specs:1 Leaks:1
+/Users/ccris/origo/closetest/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13/timsieved/scripttest.c:266: Leaks

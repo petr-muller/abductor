@@ -1,0 +1,326 @@
+#!/usr/bin/perl
+
+######################################################
+# Copyright (c) 2007-2009,                           #
+#  Cristiano Calcagno    <ccris@doc.ic.ac.uk>        #
+#  Dino Distefano        <ddino@dcs.qmul.ac.uk>      #
+#  Peter O'Hearn         <ohearn@dcs.qmul.ac.uk>     #
+#  Hongseok Yang         <hyang@dcs.qmul.ac.uk>      #
+# All rights reserved.                               #
+######################################################
+
+# Script used to run tests on benchmarks
+
+use File::Basename;
+use Time::HiRes qw(usleep ualarm gettimeofday tv_interval);
+use Cwd;
+
+# Set up absolute paths for cilly and default commands
+$base_test_dir = getcwd();
+$tmp_dir = "${base_test_dir}/tmp";
+$log_file = "${tmp_dir}/log";
+@dirs_to_create = ($tmp_dir);
+$cil_dir = "${base_test_dir}/../../cil";
+$cilly="cilly_wrapper";
+if ($ENV{'FOOTPRINT_OPTIONS'} eq "") {
+  $footprint_options = "--dofootprint --test --automatic_skip --gc_summaries=0 --timeout=1 --incremental";
+}
+else {
+  $footprint_options = $ENV{'FOOTPRINT_OPTIONS'};
+}
+$cilly_path = "${cil_dir}/bin/${cilly}";
+$configure_set_env = "CC=\"${cilly_path}\" FOOTPRINT_OPTIONS=\"${footprint_options}\"";
+$configure_set_env_retest = "CC=\"${cilly_path}\" FOOTPRINT_OPTIONS=\"${footprint_options} --re_analyze\"";
+
+$configure_command = "./configure ${configure_set_env}";
+sub test_command {
+  my ($db_dir,$num_jobs) = @_;
+  my $test_set_env = "$configure_set_env FOOTPRINT_DB_DIR=\"${db_dir}\"";
+  return "bash -c \'export ${test_set_env}; make ${test_set_env} -j${num_jobs}\'";
+}
+sub retest_command {
+  my ($db_dir,$num_jobs) = @_;
+  my $test_set_env = "$configure_set_env_retest FOOTPRINT_DB_DIR=\"${db_dir}\" FOOTPRINT_RETEST=true";
+  return "bash -c \'export ${test_set_env}; make ${test_set_env} -j${num_jobs}\'";
+}
+$pre_test_command = "make clean";
+$custom_filename = "./custom.pl";
+$configure_filename = "../configure.pl";
+
+&exe_custom_if_present;  # Run local custom script if present
+&create_dirs(@dirs_to_create); # Create directories used to store compilation and execution results
+
+if ($#ARGV < 0) {
+  print "No arguments passed\n";
+  &helpMessage;
+  exit;
+}
+elsif("$ARGV[0]" eq "unpack") {
+  &unpack;
+}
+elsif("$ARGV[0]" eq "clean") {
+  &clean;
+}
+elsif("$ARGV[0]" eq "configure") {
+  &configure;
+}
+elsif("$ARGV[0]" eq "test") {
+  &test;
+}
+elsif("$ARGV[0]" eq "retest") {
+  &retest;
+}
+else {
+  &helpMessage;
+}
+close(LOG_FILE_DESC);
+exit;
+
+# Print usage message
+sub helpMessage {
+  print "Usage: AbductorMultiFile command\n";
+  print "Commands:\n";
+  print "  unpack\t unpack files (e.g. sources.tar.gz)\n";
+  print "  clean\t\t delete unpacked files\n";
+  print "  configure\t execute configure script\n";
+  print "  test [n]\t execute test using n jobs\n";
+  print "  retest [n]\t re-execute test incrementally using n jobs\n";
+}
+
+# Create directories used to store compilation and execution results
+sub create_dirs {
+  my (@dirs) = @_;
+
+  foreach $dir (@dirs) {
+    if (-e $dir) {}
+    else { mkdir($dir) || die ("Cannot create dir")}
+  }
+  open(LOG_FILE_DESC,">>${log_file}") || die("Cannot create log file");
+}
+
+# Call a system program and log
+sub system_log {
+  my ($command) = @_;
+
+  my $date = `date`;
+  my $t0 = [gettimeofday];
+  print LOG_FILE_DESC "#start: ${date}";
+  print LOG_FILE_DESC "${command}\n";
+  my $res = system $command || die("Cannot execute command");
+  my $t1 = [gettimeofday];
+  my $elapsed = tv_interval($t0, $t1);
+  print LOG_FILE_DESC "#elapsed: $elapsed sec  result: $res\n\n";
+  return $res;
+}
+
+# Run local custom script if present
+sub exe_custom_if_present {
+  if (-e $custom_filename) {
+    require $custom_filename || die;
+  }
+}
+
+# Run the local configure script if present or the default one
+sub do_configure {
+  my ($configure_logf) = @_;
+  if (-e $configure_filename) {
+    system_log "$configure_filename >${configure_logf}";
+  }
+  else {
+    system_log "$configure_command >${configure_logf}";
+  }
+}
+
+# Unpack one file
+sub unpack_file {
+  my ($base,$ext) = @_;
+  my $fname = "${base}.${ext}";
+  print "File $fname: ";
+  if(-e $base) {
+    print "already unpacked\n"
+  }
+  else {
+    print "unpacking...";
+    system_log "tar -xzf $fname";
+    print "Done.\n";
+  }
+}
+
+# Unpack files
+sub unpack {
+  @files = <*>;
+  foreach $_ (@files) {
+    if (/(.*)\.(tar\.gz)/)
+      {
+ 	&unpack_file($1,$2);
+      }
+  }
+}
+
+# Delete one unpacked file
+sub clean_file {
+  my ($base,$ext) = @_;
+  my $fname = "${base}.${ext}";
+  print "File $fname: ";
+  if(-e $base) {
+    print "removing $base ...";
+    system "rm -rf $base";
+    print "Done.\n"
+  }
+  else {
+    print "nothing to do\n";
+  }
+}
+
+# Delete unpacked files
+sub clean {
+  @files = <*>;
+  foreach $_ (@files) {
+    if (/(.*)\.(tar\.gz)/)
+      {
+ 	&clean_file($1,$2);
+      }
+  }
+  foreach $dir (@dirs_to_create) {
+    system "rm -rf $dir";
+  }
+  system "rm -rf $log_file";
+}
+
+# Return the path of the configure log file
+sub configure_log_file {
+  my ($base,$ext) = @_;
+  return "${tmp_dir}/configure_${base}_out";
+}
+
+# Unly unpack if not already done
+sub unpack_file_if_notdone {
+  my ($base,$ext) = @_;
+  if(-e $base) {}
+  else {
+    &unpack_file($base,$ext);
+  }
+}
+
+# Execute configure script for a single directory
+sub configure_file {
+  my ($base,$ext) = @_;
+  my $fname = "${base}.${ext}";
+  my $configure_logf = configure_log_file($base,$ext);
+  &unpack_file_if_notdone($base,$ext);
+  chdir "${base_test_dir}/${base}";
+  print "Configuring ${base}...";
+  &do_configure($configure_logf);
+  print "Done.\n";
+  chdir "${base_test_dir}";
+}
+
+# Execute configure script
+sub configure {
+  @files = <*>;
+  foreach $_ (@files) {
+    if (/(.*)\.(tar\.gz)/)
+      {
+ 	&configure_file($1,$2);
+      }
+  }
+}
+
+# Return the path to the db dir
+sub get_db_dir {
+  my ($base,$num_jobs) = @_;
+  my $db_dir = "${base_test_dir}/db_${base}_j${num_jobs}";
+  return $db_dir;
+}
+
+# Create (and delete contents if present) one db directory
+sub reset_db_dir {
+  my ($base,$num_jobs) = @_;
+  my $db_dir = &get_db_dir($base,$num_jobs);
+  if (-e $db_dir) {
+    print "Found db dir $db_dir: deleting contents\n";
+    system "rm -rf $db_dir";
+  }
+  mkdir $db_dir;
+  return $db_dir;
+}
+
+# Return the path of the test log file
+sub test_log_file {
+  my ($base,$ext) = @_;
+  return "${tmp_dir}/test_${base}_out";
+}
+
+# Only configure in not already done
+sub configure_file_if_notdone {
+  my ($base,$ext) = @_;
+  my $conf_log_file = &configure_log_file($base,$ext);
+  if(-e $conf_log_file) {}
+  else {
+    &configure_file($base,$ext);
+  }
+}
+
+# Execute test invoking make -jn where n is passed as parameter
+sub test_file {
+  my ($base,$ext) = @_;
+  my $num_jobs;
+
+  if($#ARGV < 1) {
+    $num_jobs = 1;
+  }
+  else { $num_jobs = $ARGV[1]; }
+
+  &configure_file_if_notdone($base,$ext);
+  my $db_dir = &reset_db_dir($base,$num_jobs);
+  my $test_logf = &test_log_file($base,$ext);
+  my $test_comm = &test_command($db_dir,$num_jobs);
+  chdir "${base_test_dir}/${base}";
+  system_log "$pre_test_command >${test_logf}";
+  print "Running test on ${base} (${num_jobs} jobs)...";
+  system_log "$test_comm >${test_logf}";
+  print "Done.\n";
+  chdir "${base_test_dir}";
+}
+
+# Test files
+sub test {
+  @files = <*>;
+  foreach $_ (@files) {
+    if (/(.*)\.(tar\.gz)/)
+      {
+ 	&test_file($1,$2);
+      }
+  }
+}
+
+# Same as test_file but do not configure or delete the db dir
+sub retest_file {
+  my ($base,$ext) = @_;
+  my $num_jobs;
+
+  if($#ARGV < 1) {
+    $num_jobs = 1;
+  }
+  else { $num_jobs = $ARGV[1]; }
+
+  my $db_dir = &get_db_dir($base,$num_jobs);
+  my $test_logf = &test_log_file($base,$ext);
+  my $retest_comm = &retest_command($db_dir,$num_jobs);
+
+  chdir "${base_test_dir}/${base}";
+  system_log "$retest_comm >${test_logf}";
+  print "Done.\n";
+  chdir "${base_test_dir}";
+}
+
+# Re-test files
+sub retest {
+  @files = <*>;
+  foreach $_ (@files) {
+    if (/(.*)\.(tar\.gz)/)
+      {
+ 	&retest_file($1,$2);
+      }
+  }
+}

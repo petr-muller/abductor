@@ -1,0 +1,108 @@
+export OCAMLMAKEFILE = OcamlMakefile
+export OCAMLYACC = ocamlyacc -v
+export OCAMLC = ocamlc.opt -ccopt -L../cil/obj/x86_DARWIN/ -I ../cil/obj/x86_DARWIN/ -dtypes
+export OCAMLOPT = ocamlopt.opt -ccopt -L../cil/obj/x86_DARWIN/ -I ../cil/obj/x86_DARWIN/ -dtypes
+export OCAMLDEP = ocamldep.opt
+export OCAMLDOC = ocamldoc.opt -I ../cil/obj/x86_DARWIN/
+
+
+INCLUDES = 
+
+PARSING = 
+PARSING_TRASH = parser.output
+
+SOURCEDIRS = ../cil/src ../cil/src/frontc ../cil/src/ext ../cil/ocamlutil .
+
+CIL_SOURCES = ../cil/obj/x86_DARWIN/
+
+SIL_SOURCES = config.ml error.mli error.ml ident.mli ident.ml sil.mli sil.ml \
+        prop.mli prop.ml \
+        exceptions.mli exceptions.ml \
+	match.mli match.ml \
+	prover.mli prover.ml \
+	dotty.mli dotty.ml \
+	propset.mli propset.ml \
+        dom.mli dom.ml \
+	trans.mli trans.ml \
+        locality.mli locality.ml \
+	cfg_new.mli cfg_new.ml \
+	fork.mli fork.ml \
+	tabulation.mli tabulation.ml \
+	symExec.mli symExec.ml \
+	abs.mli abs.ml \
+        global.mli global.ml \
+        preanal.mli preanal.ml \
+	footprint.mli footprint.ml \
+	interproc.mli interproc.ml \
+	parser.mly lexer.mll
+
+TOPLEVEL_SOURCES = $(PARSING) $(CIL_SOURCES) $(SIL_SOURCES)
+TOPLEVEL_TRASH = $(PARSING_TRASH)
+TOPLEVEL = SOURCES="$(TOPLEVEL_SOURCES)" \
+           RESULT=toplevel \
+           TRASH="$(TOPLEVEL_TRASH)"
+
+MAIN_SOURCES = $(TOPLEVEL_SOURCES) main.ml
+MAIN = SOURCES="$(MAIN_SOURCES)" \
+       LIBS="str" \
+       RESULT=sil.byte \
+       TRASH="$(TOPLEVEL_TRASH)"
+
+PARSER_SOURCES = config.ml location.ml error.ml ident.ml sil.ml prop.ml exceptions.ml prover.ml dotty.ml propset.ml parser.mly lexer.mll main.ml
+PARSER = SOURCES="$(PARSER_SOURCES)" \
+       LIBS="str unix cil" \
+       RESULT=parser \
+       TRASH="$(TOPLEVEL_TRASH)"
+
+MAINOPT = SOURCES="$(MAIN_SOURCES)" \
+       LIBS="str" \
+       RESULT=sil \
+       TRASH="$(TOPLEVEL_TRASH)"
+
+default: sil.byte parser doc
+
+all: toplevel sil.byte sil doc
+
+.PHONY: sil.byte
+sil.byte:
+	$(MAKE) -f $(OCAMLMAKEFILE) $(MAIN) debug-code-nolink
+
+.PHONY: parser
+parser: $(PARSER_SOURCES)
+	$(MAKE) -f $(OCAMLMAKEFILE) $(PARSER) native-code
+
+.PHONY: sil
+sil:
+	$(MAKE) -f $(OCAMLMAKEFILE) $(MAINOPT) native-code
+
+.PHONY: toplevel
+toplevel:
+	$(MAKE) -f $(OCAMLMAKEFILE) $(TOPLEVEL) byte-code-library
+
+.PHONY: doc
+doc:
+	$(OCAMLDOC) -html -colorize-code -sort -d doc -dump doc/test.odoc $(filter %.mli, $(SIL_SOURCES))
+
+.PHONY: doc_latex
+doc_latex:
+	$(OCAMLDOC) -latex -d doc -o doc/doc.tex $(filter %.mli, $(SIL_SOURCES))
+
+
+.PHONY: doc_dot
+doc_dot: $(SIL_SOURCES)
+	$(OCAMLDOC) -dot -sort -o doc/modules.dot $(filter %.mli, $(SIL_SOURCES))
+
+clean:
+	$(MAKE) -f $(OCAMLMAKEFILE) $(MAIN) clean
+	$(MAKE) -f $(OCAMLMAKEFILE) $(MAINOPT) clean
+	$(MAKE) -f $(OCAMLMAKEFILE) $(TOPLEVEL) clean
+	$(MAKE) -f $(OCAMLMAKEFILE) $(PARSER) clean
+	rm -f doc/*.html doc/*.css doc/test.odoc
+	rm -f *.annot
+
+depend:
+	$(OCAMLDEP) $(INCLUDES) *.mli *.ml > .depend
+
+dummy:
+
+include .depend

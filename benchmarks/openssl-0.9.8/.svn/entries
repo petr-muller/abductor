@@ -1,0 +1,41 @@
+8
+
+dir
+914
+https://svn.origo.ethz.ch/closetest/trunk/benchmarks/openssl-0.9.8
+https://svn.origo.ethz.ch/closetest
+
+
+
+2008-06-03T11:12:05.004702Z
+232
+ccris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+22e5b79c-c023-4d39-8e8c-0ce51885f842
+
+openssl-0.9.8g.tar.gz
+file
+
+
+
+
+2009-09-11T15:21:41.000000Z
+acf70a16359bf3658bdfb74bda1c4419
+2008-06-03T11:12:05.004702Z
+232
+ccris
+has-props
+

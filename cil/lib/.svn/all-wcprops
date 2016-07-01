@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/closetest/!svn/ver/521/trunk/cil/lib
+END
+TempFile.pm
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/closetest/!svn/ver/130/trunk/cil/lib/TempFile.pm
+END
+Cilly_compileonly.pm
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/closetest/!svn/ver/521/trunk/cil/lib/Cilly_compileonly.pm
+END
+Cilly.pm
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/130/trunk/cil/lib/Cilly.pm
+END
+OutputFile.pm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/closetest/!svn/ver/14/trunk/cil/lib/OutputFile.pm
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/closetest/!svn/ver/130/trunk/cil/lib/.cvsignore
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/130/trunk/cil/lib/Makefile
+END
+.gdbinit
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/130/trunk/cil/lib/.gdbinit
+END
+KeptFile.pm
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/closetest/!svn/ver/14/trunk/cil/lib/KeptFile.pm
+END

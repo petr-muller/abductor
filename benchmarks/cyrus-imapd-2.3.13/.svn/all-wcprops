@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/closetest/!svn/ver/706/trunk/benchmarks/cyrus-imapd-2.3.13
+END
+cyrus-imapd-2.3.13.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/closetest/!svn/ver/697/trunk/benchmarks/cyrus-imapd-2.3.13/cyrus-imapd-2.3.13.tar.gz
+END
+configure.pl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/closetest/!svn/ver/695/trunk/benchmarks/cyrus-imapd-2.3.13/configure.pl
+END
+leaks.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/closetest/!svn/ver/706/trunk/benchmarks/cyrus-imapd-2.3.13/leaks.txt
+END

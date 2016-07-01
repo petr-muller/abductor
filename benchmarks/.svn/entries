@@ -1,0 +1,100 @@
+8
+
+dir
+914
+https://svn.origo.ethz.ch/closetest/trunk/benchmarks
+https://svn.origo.ethz.ch/closetest
+
+
+
+2009-10-02T18:44:59.450879Z
+794
+ccris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+22e5b79c-c023-4d39-8e8c-0ce51885f842
+
+cyrus-imapd-2.3.13
+dir
+
+openssh-5.0p1
+dir
+
+gimp-2.4.6
+dir
+
+mailutils-1.2
+dir
+
+bind-9.5.0
+dir
+
+apache-2.2.8
+dir
+
+sendmail.8.14.3
+dir
+
+stats.pl
+file
+
+
+
+
+2010-06-29T15:27:57.000000Z
+cdcd590cd776e0b9b257cf82ad6def55
+2009-10-02T18:44:59.450879Z
+794
+ccris
+has-props
+
+gzip-1.3.12
+dir
+
+linux-2.6.25.4
+dir
+
+loop
+file
+
+
+
+
+2009-09-11T15:21:41.000000Z
+a39023355575359cd0a6b2cf51028594
+2008-06-15T05:29:29.765847Z
+301
+ccris
+has-props
+
+test.pl
+file
+
+
+
+
+2009-09-11T15:21:41.000000Z
+966fab4ed1979931396e2461045f5514
+2008-08-06T16:23:18.996191Z
+521
+ccris
+has-props
+
+openssl-0.9.8
+dir
+
+spin-5.1.6
+dir
+

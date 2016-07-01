@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+######################################################
+# Copyright (c) 2007-2009,                           #
+#  Cristiano Calcagno    <ccris@doc.ic.ac.uk>        #
+#  Dino Distefano        <ddino@dcs.qmul.ac.uk>      #
+#  Peter O'Hearn         <ohearn@dcs.qmul.ac.uk>     #
+#  Hongseok Yang         <hyang@dcs.qmul.ac.uk>      #
+# All rights reserved.                               #
+######################################################
+
+
+use File::Basename;
+
+my @args;
+my $argnum;
+foreach $argnum (0 .. $#ARGV) {
+ $args[$argnum] = "\'$ARGV[$argnum]\'";
+}
+
+my($name,$path,$suffix) = fileparse($0);
+
+if ($ENV{'FOOTPRINT_OPTIONS'} eq "") {
+  $footprint_options =  '--dofootprint --automatic_skip --test --timeout=1 --one_spec_per_file';
+}
+else {
+  $footprint_options = $ENV{'FOOTPRINT_OPTIONS'};
+}
+
+if (!$ENV{'FOOTPRINT_DB_DIR'} eq "") {
+  my $db_dir = $ENV{'FOOTPRINT_DB_DIR'};
+  $footprint_options = "${footprint_options} --db_dir=${db_dir}";
+}
+
+my $cilly_path = "${path}/cilly_compileonly${suffix}";
+
+my $call_cilly = "$cilly_path $footprint_options @args";
+
+use FindBin;
+use lib "$FindBin::Bin";
+use CilConfig;
+$ENV{'CILHOME'} = "$::cilhome";
+
+print STDERR "\ncall cilly: $call_cilly\n";
+my $res = system $call_cilly;
+if($res != 0) {die;}
+

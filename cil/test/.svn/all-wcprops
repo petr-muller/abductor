@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/closetest/!svn/ver/130/trunk/cil/test
+END
+testcil.pl
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/closetest/!svn/ver/130/trunk/cil/test/testcil.pl
+END
+testcil
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/130/trunk/cil/test/testcil
+END
+testcil.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/closetest/!svn/ver/130/trunk/cil/test/testcil.bat
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/closetest/!svn/ver/130/trunk/cil/test/.cvsignore
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/closetest/!svn/ver/130/trunk/cil/test/Makefile
+END
+testcil.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/closetest/!svn/ver/130/trunk/cil/test/testcil.h
+END

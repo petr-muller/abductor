@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/closetest/!svn/ver/723/trunk/cil
+END
+config.mk.in
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/130/trunk/cil/config.mk.in
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/closetest/!svn/ver/227/trunk/cil/configure
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/722/trunk/cil/Makefile.in
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/closetest/!svn/ver/130/trunk/cil/LICENSE
+END
+Makefile.msvc
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/14/trunk/cil/Makefile.msvc
+END
+configure.in
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/227/trunk/cil/configure.in
+END
+NOTES
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/closetest/!svn/ver/130/trunk/cil/NOTES
+END
+myocamlbuild.ml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/closetest/!svn/ver/130/trunk/cil/myocamlbuild.ml
+END
+config.guess
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/closetest/!svn/ver/130/trunk/cil/config.guess
+END
+_tags
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/closetest/!svn/ver/130/trunk/cil/_tags
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/closetest/!svn/ver/14/trunk/cil/README
+END
+config.sub
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/closetest/!svn/ver/14/trunk/cil/config.sub
+END
+config.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/130/trunk/cil/config.h.in
+END
+cil.spec
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/closetest/!svn/ver/130/trunk/cil/cil.spec
+END
+script
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/closetest/!svn/ver/466/trunk/cil/script
+END
+cil.spec.in
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/130/trunk/cil/cil.spec.in
+END
+cil.itarget
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/130/trunk/cil/cil.itarget
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/closetest/!svn/ver/14/trunk/cil/INSTALL
+END
+Makefile.gcc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/closetest/!svn/ver/14/trunk/cil/Makefile.gcc
+END
+aclocal.m4
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/closetest/!svn/ver/130/trunk/cil/aclocal.m4
+END
+Bootstrap
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/closetest/!svn/ver/130/trunk/cil/Bootstrap
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/closetest/!svn/ver/14/trunk/cil/install-sh
+END
